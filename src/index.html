@@ -1,47 +1,490 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body class="bg-background">
-  <header class="w-full py-4 text-primaria text-xl">
-    <nav class="flex justify-around items-center">
-      <div class="flex justify-around gap-2">
-        <img src="images/Union.png" alt="logo empresa">
-        <a href="#">Salt</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-background font-Inter">
+    <header class="w-full py-4 text-primaria text-xl container mx-auto">
+      <!-- navigation Menu-->
+      <nav class="flex justify-around items-center">
+        <div class="flex justify-around gap-2">
+          <img src="images/Union.png" alt="logo empresa" />
+          <a href="#">Salt</a>
+        </div>
+        <div class="flex justify-center gap-3 container mx-auto">
+          <a href="#" class="relative inline-block text-primaria group">
+            Home
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+          <a href="#" class="relative inline-block text-primaria group">
+            About us
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+          <a href="#" class="relative inline-block text-primaria group">
+            Destinations
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+          <a href="#" class="relative inline-block text-primaria group">
+            Tours
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+          <a href="#" class="relative inline-block text-primaria group">
+            Blog
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+        </div>
+        <div>
+          <button
+            class="border-2 border-orange-400 rounded-2xl p-1 flex items-center justify-center gap-1"
+          >
+            <span class="font-serif text-sm">book Now</span>
+            <i class="fas fa-paper-plane text-sm text-orange-400"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!-- navigation Menu-->
+
+    <!-- hero section -->
+    <section class="w-full container mx-auto mt-12 gap-24">
+      <div class="flex items-start justify-center gap-12">
+        <!-- Título e Parágrafo -->
+        <div class="Principal-title flex flex-col max-w-[500px] gap-12">
+          <h1 class="text-primaria text-6xl text-balance">
+            Discover the Best Lovely Places
+          </h1>
+          <p class="text-gray-600 pt-4 text-balance text-lg mt-5">
+            Plan and book your perfect trip with expert advice, travel tips,
+            destination information and inspiration from us.
+          </p>
+          <div class="flex items-center container mx-auto jus w-full mt-12">
+            <div
+              class="flex items-center border rounded-lg gap-2 py-2 bg-white"
+            >
+              <input
+                type="text"
+                id="wherefield"
+                placeholder="para onde deseja"
+                class="flex-1 px-2"
+              />
+              <span>
+                <svg
+                  class="bi bi-geo-alt"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="flex items-center border rounded-lg gap-2 py-2 bg-white"
+            >
+              <input
+                type="text"
+                id="datefield"
+                class="flex-1 px-2 bg-white placeholder:text-gray-500"
+                placeholder="dd/mm/year"
+              />
+              <span class="text-gray-500 cursor-pointer bg-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search mr-2 text-secundaria"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagem -->
+        <div class="relative">
+          <img src="images/Image.png" alt="hero image" class="object-cover" />
+
+          <img
+            class="absolute top-10 left-10"
+            src="images/Orion_globe 1.png"
+            alt="Orion Globe"
+          />
+          <img
+            class="absolute bottom-0 object-contain"
+            src="images/Card.png"
+            alt=""
+          />
+
+          <img
+            class="absolute bottom-0 right-10"
+            src="images/Orion_navigation-map 1.png"
+            alt="Orion Navigation Map"
+          />
+        </div>
       </div>
-      <div class="flex justify-center gap-3">
-        <a href="#" class="relative inline-block text-primaria group">
-          Home
-          <span class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </a>
-        <a href="#" class="relative inline-block text-primaria group">
-          About us
-          <span class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </a>
-        <a href="#" class="relative inline-block text-primaria group">
-          Destinations
-          <span class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </a>
-        <a href="#" class="relative inline-block text-primaria group">
-          Tours
-          <span class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </a>
-        <a href="#" class="relative inline-block text-primaria group">
-          Blog
-          <span class="absolute inset-x-0 bottom-0 h-1 bg-orange-400 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </a>
+    </section>
+    <section class="container mx-auto">
+      <div class="flex items-center justify-between pl-24">
+        <div class="flex flex-col max-w-[550px]">
+          <h2 class="text-primaria text-4xl font-semibold">Categories</h2>
+          <p class="text-gray-600 text-balance pt-4">
+            Here are lots of interesting destinations to visit, but don’t be
+            confused—they’re already grouped by category.
+          </p>
+        </div>
+        <div class="buttons-categories flex gap-2">
+          <button
+            class="after:content-[''] after:block after:w-2.5 after:h-2.5 after:border-t-2 after:border-l-2 after:border-gray-800 after:-rotate-45 bg-transparent h-8 w-8 rounded-full flex items-center justify-center border-2 border-gray-800"
+          ></button>
+          <button
+            class="after:content-[''] after:block after:w-2.5 after:h-2.5 after:border-b-2 after:border-r-2 after:border-white after:-rotate-45 bg-gray-800 h-8 w-8 rounded-full flex items-center justify-center border-none"
+          ></button>
+        </div>
       </div>
-      <div>
-        <button class="border-2 border-orange-400 rounded-3xl p-4">
-          book Now
-          <i class="fas fa-paper-plane text-orange-400"></i>
-        </button>
+
+      <!--Categories images-->
+      <div
+        class="img-categories flex items-center justify-center mt-16 gap-14 flex-wrap"
+      >
+        <div
+          class="flex flex-col items-center justify-center cursor-pointer relative group"
+        >
+          <img
+            class="rounded-full h-[200px] w-[120px] object-cover transition duration-300 group-hover:brightness-50"
+            src="images/beach.jpg"
+            alt="Island"
+          />
+
+          <span
+            class="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold opacity-0 transition duration-300 group-hover:opacity-100"
+          >
+            Visite
+          </span>
+
+          <p class="mt-2">Beach</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center cursor-pointer relative group"
+        >
+          <img
+            class="rounded-full h-[200px] w-[120px] object-cover transition duration-300 group-hover:brightness-50"
+            src="images/canyon.jpg"
+            alt="Island"
+          />
+
+          <span
+            class="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold opacity-0 transition duration-300 group-hover:opacity-100"
+          >
+            Visit
+          </span>
+
+          <p class="mt-2">Canyon</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center cursor-pointer relative group"
+        >
+          <img
+            class="rounded-full h-[200px] w-[120px] object-cover transition duration-300 group-hover:brightness-50"
+            src="images/city.jpg"
+            alt="Island"
+          />
+
+          <span
+            class="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold opacity-0 transition duration-300 group-hover:opacity-100"
+          >
+            Visite
+          </span>
+
+          <p class="mt-2">City</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center cursor-pointer relative group"
+        >
+          <img
+            class="rounded-full h-[200px] w-[120px] object-cover transition duration-300 group-hover:brightness-50"
+            src="images/desert.jpg"
+            alt="Island"
+          />
+
+          <span
+            class="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold opacity-0 transition duration-300 group-hover:opacity-100"
+          >
+            Visit
+          </span>
+
+          <p class="mt-2">Desert</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center cursor-pointer relative group"
+        >
+          <img
+            class="rounded-full h-[200px] w-[120px] object-cover transition duration-300 group-hover:brightness-50"
+            src="images/island.jpg"
+            alt="Island"
+          />
+
+          <span
+            class="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold opacity-0 transition duration-300 group-hover:opacity-100"
+          >
+            Visite
+          </span>
+
+          <p class="mt-2">Island</p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-center cursor-pointer relative group"
+        >
+          <img
+            class="rounded-full h-[200px] w-[120px] object-cover transition duration-300 group-hover:brightness-50"
+            src="images/forest.jpg"
+            alt="Island"
+          />
+
+          <span
+            class="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold opacity-0 transition duration-300 group-hover:opacity-100"
+          >
+            Visit
+          </span>
+
+          <p class="mt-2">Forest</p>
+        </div>
+
+        <div class="hidden"><img src="images/lake.jpg" alt="" /></div>
+        <div class="hidden"><img src="images/mountain.jpg" alt="" /></div>
+        <div class="hidden"><img src="images/pyramid.jpg" alt="" /></div>
+        <div class="hidden"><img src="images/temple.jpg" alt="" /></div>
+        <div class="hidden"><img src="images/tower.jpg" alt="" /></div>
+        <div class="hidden"><img src="images/volcano.jpg" alt="" /></div>
       </div>
-    </nav>
-  </header>
-</body>
+    </section>
+
+    <!-- our experience-->
+    <section
+      class="container mx-auto flex flex-row items-center justify-center gap-12 mt-24"
+    >
+      <div class="relative w-[500px]">
+        <img src="images/hero-2.png" alt="" />
+        <span class="absolute top-0 left-0">
+          <img class="w-24" src="images/Card01.png" alt="" />
+        </span>
+        <span class="absolute bottom-0 -right-36">
+          <img class="object-cover" src="images/Card02.png" alt="" />
+        </span>
+      </div>
+
+      <!-- Bloco de textos -->
+      <div class="flex flex-col justify-center items-center max-w-[500px]">
+        <p class="text-secundaria tracking-widest">Our Experience</p>
+        <h1 class="text-3xl font-bold text-primaria">
+          Our Stories Have Adventures
+        </h1>
+        <p class="text-gray-500 mt-4 text-balance pl-12">
+          We are experienced in bringing adventures to stay their journey, with
+          all outdoor destinations in the world as our specialties. Start your
+          adventure now! Nature has already called you!
+        </p>
+
+        <div class="flex gap-4 mt-6 justify-center items-center pt-12">
+          <div
+            class="w-24 h-24 bg-white flex items-center flex-col justify-center rounded-xl"
+          >
+            <p class="text-2xl text-secundaria font-bold">12k+</p>
+            <p class="text-sm text-gray-300">Succes</p>
+            <p class="text-sm text-gray-300">Journey</p>
+          </div>
+          <div
+            class="w-24 h-24 bg-white flex items-center flex-col justify-center rounded-xl"
+          >
+            <p class="text-2xl text-secundaria font-bold">16+</p>
+            <p class="text-sm text-gray-300">Awards</p>
+            <p class="text-sm text-gray-300">Winning</p>
+          </div>
+          <div
+            class="w-24 h-24 bg-white flex items-center flex-col justify-center rounded-xl"
+          >
+            <p class="text-2xl text-secundaria font-bold">20+</p>
+            <p class="text-sm text-gray-300">Years of</p>
+            <p class="text-sm text-gray-300">Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- find destination-->
+
+    <section class="container mx-auto mt-14">
+      <h2>Find Popular Destination</h2>
+      
+      <!--images destination-->
+      <div
+      class="destination-container-cards mt-14 flex container mx-auto gap-4 h-full">
+
+
+      
+        <div
+        class="cards-content bg-[#C0BCA138] size-80 p-4 rounded-xl border-2 border-white flex flex-col h-full"
+        >
+          <div>
+            <img src="images/mountain-king.png" alt="" />
+          </div>
+          <div class="mt-2 flex flex-grow flex-col ">
+            <h2>Mountain Hiking Tour</h2>
+            <p class="text-xs text-gray-500">Explore stunning mountain trails with breathtaking views.</p>
+
+            <div class="flex justify-between mt-12 items-end ">
+              <span>$89<span class="text-xs text-gray-500">/person</span></span>
+              <button
+                class="bg-gray-800 px-2 py-1 rounded-2xl text-xs text-white font-light"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+        class="cards-content bg-[#C0BCA138] size-80 p-4 rounded-xl border-2 border-white flex flex-col h-full"
+        >
+          <div>
+            <img src="images/mountain-king.png" alt="" />
+          </div>
+          <div class="mt-2 flex flex-grow flex-col ">
+            <h2>Mountain Hiking Tour</h2>
+            <p class="text-xs text-gray-500">Explore stunning mountain trails with breathtaking views.</p>
+
+            <div class="flex justify-between mt-12 items-end ">
+              <span>$89<span class="text-xs text-gray-500">/person</span></span>
+              <button
+                class="bg-gray-800 px-2 py-1 rounded-2xl text-xs text-white font-light"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+        class="cards-content bg-[#C0BCA138] size-80 p-4 rounded-xl border-2 border-white flex flex-col h-full"
+        >
+          <div>
+            <img src="images/mountain-king.png" alt="" />
+          </div>
+          <div class="mt-2 flex flex-grow flex-col ">
+            <h2>Mountain Hiking Tour</h2>
+            <p class="text-xs text-gray-500">Explore stunning mountain trails with breathtaking views.</p>
+
+            <div class="flex justify-between mt-12 items-end ">
+              <span>$89<span class="text-xs text-gray-500">/person</span></span>
+              <button
+                class="bg-gray-800 px-2 py-1 rounded-2xl text-xs text-white font-light"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+        class="cards-content bg-[#C0BCA138] size-80 p-4 rounded-xl border-2 border-white flex flex-col h-full"
+        >
+          <div>
+            <img src="images/mountain-king.png" alt="" />
+          </div>
+          <div class="mt-2 flex flex-grow flex-col ">
+            <h2>Mountain Hiking Tour</h2>
+            <p class="text-xs text-gray-500">Explore stunning mountain trails with breathtaking views.</p>
+
+            <div class="flex justify-between mt-12 items-end ">
+              <span>$89<span class="text-xs text-gray-500">/person</span></span>
+              <button
+                class="bg-gray-800 px-2 py-1 rounded-2xl text-xs text-white font-light"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+        class="cards-content bg-[#C0BCA138] size-80 p-4 rounded-xl border-2 border-white flex flex-col h-full"
+        >
+          <div>
+            <img src="images/mountain-king.png" alt="" />
+          </div>
+          <div class="mt-2 flex flex-grow flex-col ">
+            <h2>Mountain Hiking Tour</h2>
+            <p class="text-xs text-gray-500">Explore stunning mountain trails with breathtaking views.</p>
+
+            <div class="flex justify-between mt-12 items-end ">
+              <span>$89<span class="text-xs text-gray-500">/person</span></span>
+              <button
+                class="bg-gray-800 px-2 py-1 rounded-2xl text-xs text-white font-light"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+       
+
+        
+    </section>
+
+    <!-- top destinations-->
+    <section class="container mx-auto  mt-16 " >
+      <div class="flex items-center justify-center flex-col" >
+         <h1 class="text-4xl text-gray-800 " >Top Destinations</h1>
+         <p class="text-gray-400 text-xs mt-4" >Sost Brilliant reasons entrada should be your one-stop-shop</p>
+      </div>
+      <div class="flex items-center justify-center gap-4 text-xs mt-8 " >
+        <button class="bg-transparent rounded-xl px-2 border-2 border-gray-800 hover:bg-gray-800 hover:text-white transition duration-500 ease-out font-serif " >London</button>
+        <button class="bg-transparent rounded-xl px-2 border-2 border-gray-800 hover:bg-gray-800 hover:text-white transition duration-500 ease-out font-serif  " >Bangkok</button>
+        <button class="bg-transparent rounded-xl px-2 border-2 border-gray-800 hover:bg-gray-800 hover:text-white transition duration-500 ease-out font-serif  " >England</button>
+        <button class="bg-transparent rounded-xl px-2 border-2 border-gray-800 hover:bg-gray-800 hover:text-white transition duration-500 ease-out font-serif  " >Singapore</button>
+        <button class="bg-transparent rounded-xl px-2 border-2 border-gray-800 hover:bg-gray-800 hover:text-white transition duration-500 ease-out font-serif  " >italy</button>
+      </div>
+      <!--grid destination-->
+      <div class="container " >
+        <div class="image-item" >
+          <img src="" alt="">
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

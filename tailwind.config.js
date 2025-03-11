@@ -8,6 +8,9 @@ module.exports = {
         'secundaria': '#F66F4D', 
         'background': '#FAF8ED',
       },
+      fontFamily: {
+        Inter: ['inter', 'sans-serif']
+      }
     },
   },
   plugins: [],
